@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skin Analyzer — Mobile App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SA</div>
+        <div>
+          <h1 class="app-name">Skin Analyzer</h1>
+          <div class="tag">AI-powered skincare insights</div>
+        </div>
+      </div>
+      <nav class="download-buttons">
+        <a class="btn" href="skin-quiz.html">Take the Skin Quiz</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <span class="kicker">New • Launch Offer</span>
+          <h2>Understand your skin. Healthier skin.</h2>
+          <p class="lead">Upload a selfie to get an instant, science-backed skin analysis and gentle, actionable suggestions (for example: try hyaluronic acid). Dermatologist-informed.</p>
+
+          <div class="cta-row">
+            <a class="primary" href="https://apps.apple.com/app/idYOUR_APP_ID">Get the app</a>
+            <a class="secondary" href="#features">How it works</a>
+          </div>
+
+          <div class="features" style="margin-top:18px">
+            <div class="feature">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3>Instant Analysis</h3>
+              <p>Fast skin-type & concerns detection from a single photo.</p>
+            </div>
+            <div class="feature">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3>Actionable Suggestions</h3>
+              <p>Practical, easy-to-try tips you can apply right away.</p>
+            </div>
+            <div class="feature">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3>Dermatologist-informed</h3>
+              <p>Recommendations and explanations reviewed by skin experts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="device" aria-hidden>
+          <div class="screen" role="img" aria-label="App mockup">
+            <div class="screenshot">
+              <div class="mock-head">
+                <div style="color:var(--muted);font-size:12px">Today</div>
+                <div class="pill"></div>
+              </div>
+
+              <div class="s-card" style="margin-top:14px">
+                <strong style="display:block">Skin Score: 78</strong>
+                <small style="color:var(--muted);">Hydration: Good • Texture: Smooth</small>
+                <p style="margin-top:8px;color:#bfeee0;font-size:13px">Try the recommended 3-step evening routine to improve hydration and reduce redness.</p>
+              </div>
+
+              <div style="flex:1"></div>
+
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+                <div style="font-size:12px;color:var(--muted)">Recommendations</div>
+                <div style="display:flex;gap:8px">
+                  <div style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.04)"></div>
+                  <div style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.04)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" style="margin-top:18px">
+        <h3 style="margin:6px 0 8px">How it works</h3>
+        <p class="lead" style="margin-bottom:12px">Snap a photo and receive soft, practical suggestions you can try at home.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
+            <strong>1. Capture</strong>
+            <p style="color:var(--muted);margin-top:6px">Take a guided selfie under natural light. The app detects framing & lighting automatically.</p>
+          </div>
+          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
+            <strong>2. Analyze</strong>
+            <p style="color:var(--muted);margin-top:6px">On-device AI evaluates skin tone, texture, redness, and hydration.</p>
+          </div>
+          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
+            <strong>3. Suggestions</strong>
+            <p style="color:var(--muted);margin-top:6px">Get gentle, implementable tips (e.g. consider using hyaluronic acid for hydration).</p>
+          </div>
+          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
+            <strong>4. Track</strong>
+            <p style="color:var(--muted);margin-top:6px">Save results and view history to monitor changes and progress over time.</p>
+          </div>
+        </div>
+
+        <div class="cta-strip">
+          <div>
+            <strong>Ready to start?</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Download Skin Analyzer and take your first photo in under a minute.</div>
+          </div>
+          <div class="download">
+            <a class="primary" href="#download">Download</a>
+            <a class="secondary" href="#privacy">Privacy</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" style="margin-top:18px">
+        <h3 style="margin:6px 0 8px">Download</h3>
+        <p class="lead" style="margin-bottom:12px">Available on the App Store. Use the "Get the app" button above to start the download.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Skin Analyzer</div>
+      <div style="display:flex;gap:10px">
+        <a href="#privacy" style="color:var(--muted);text-decoration:none">Privacy</a>
+        <a href="#terms" style="color:var(--muted);text-decoration:none">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple focus state for accessibility
+    document.querySelectorAll('a,button').forEach(el=>el.addEventListener('focus',()=>el.style.boxShadow='0 6px 18px rgba(0,0,0,0.35)'))
+
+    // Idle JS: hit a fake animation to make the hero lively
+    // (kept tiny and optional for performance on mobile)
+    const device = document.querySelector('.device');
+    if(device){
+      let t=0;setInterval(()=>{t=(t+1)%360;device.style.transform=`rotate(${Math.sin(t/20)}deg)`},4500)
+    }
+  </script>
+</body>
+</html>

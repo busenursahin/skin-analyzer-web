@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skin Type Quiz — Skin Analyzer</title>
+  <meta name="description" content="Answer 10 quick questions to estimate your skin type — oily, dry, combination, normal or sensitive. Save results to track skin history.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SA</div>
+        <div>
+          <h1 class="app-name">Skin Analyzer — Quiz</h1>
+          <div class="tag">Discover your skin type in minutes</div>
+        </div>
+      </div>
+    </header>
+
+    <main style="padding-top:12px">
+      <section>
+        <h2 style="margin-top:6px">Skin Type Quiz</h2>
+        <p class="lead">Answer 10 short questions to get an estimated skin type and gentle suggestions.</p>
+
+        <form id="quiz" aria-label="Skin type quiz" style="margin-top:14px">
+          <!-- Q1 -->
+          <div style="margin-bottom:12px">
+            <label><strong>1. How does your skin usually feel mid-day?</strong></label>
+            <div>
+              <label><input type="radio" name="q1" value="oily" required> Oily / shiny</label><br>
+              <label><input type="radio" name="q1" value="dry"> Dry / tight</label><br>
+              <label><input type="radio" name="q1" value="normal"> Comfortable / balanced</label>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div style="margin-bottom:12px">
+            <label><strong>2. Do you often see shine on your face?</strong></label>
+            <div>
+              <label><input type="radio" name="q2" value="often" required> Often</label><br>
+              <label><input type="radio" name="q2" value="sometimes"> Sometimes</label><br>
+              <label><input type="radio" name="q2" value="rarely"> Rarely</label>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div style="margin-bottom:12px">
+            <label><strong>3. Do you get flaky or rough patches?</strong></label>
+            <div>
+              <label><input type="radio" name="q3" value="yes" required> Yes</label><br>
+              <label><input type="radio" name="q3" value="no"> No</label>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div style="margin-bottom:12px">
+            <label><strong>4. Are breakouts a frequent issue?</strong></label>
+            <div>
+              <label><input type="radio" name="q4" value="often" required> Often</label><br>
+              <label><input type="radio" name="q4" value="sometimes"> Sometimes</label><br>
+              <label><input type="radio" name="q4" value="rarely"> Rarely</label>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div style="margin-bottom:12px">
+            <label><strong>5. Do you notice oil mainly in the T-zone (forehead, nose, chin) while cheeks stay dry?</strong></label>
+            <div>
+              <label><input type="radio" name="q5" value="yes" required> Yes</label><br>
+              <label><input type="radio" name="q5" value="no"> No</label>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div style="margin-bottom:12px">
+            <label><strong>6. Does new skincare often cause redness or irritation?</strong></label>
+            <div>
+              <label><input type="radio" name="q6" value="often" required> Often</label><br>
+              <label><input type="radio" name="q6" value="sometimes"> Sometimes</label><br>
+              <label><input type="radio" name="q6" value="rarely"> Rarely</label>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div style="margin-bottom:12px">
+            <label><strong>7. How visible are your pores?</strong></label>
+            <div>
+              <label><input type="radio" name="q7" value="large" required> Large / very visible</label><br>
+              <label><input type="radio" name="q7" value="moderate"> Moderate</label><br>
+              <label><input type="radio" name="q7" value="small"> Small / not visible</label>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div style="margin-bottom:12px">
+            <label><strong>8. After washing, does your skin feel tight or comfortable?</strong></label>
+            <div>
+              <label><input type="radio" name="q8" value="tight" required> Tight / dry</label><br>
+              <label><input type="radio" name="q8" value="comfortable"> Comfortable</label>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div style="margin-bottom:12px">
+            <label><strong>9. How hydrated does your skin usually look?</strong></label>
+            <div>
+              <label><input type="radio" name="q9" value="well" required> Well hydrated</label><br>
+              <label><input type="radio" name="q9" value="somewhat"> Somewhat hydrated</label><br>
+              <label><input type="radio" name="q9" value="not"> Not hydrated</label>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div style="margin-bottom:12px">
+            <label><strong>10. Do you have visible redness or sensitivity?</strong></label>
+            <div>
+              <label><input type="radio" name="q10" value="yes" required> Yes</label><br>
+              <label><input type="radio" name="q10" value="no"> No</label>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+            <button type="submit" class="primary">Submit</button>
+            <button type="button" id="saveBtn" class="secondary">Save result</button>
+            <a href="index.html" class="btn">Back</a>
+          </div>
+        </form>
+
+        <div id="result" style="margin-top:18px"></div>
+
+        <section style="margin-top:18px">
+          <h3>History</h3>
+          <div id="historyList" style="margin-top:10px;color:var(--muted)">No saved results yet.</div>
+        </section>
+
+      </section>
+    </main>
+
+    <footer style="margin-top:22px">
+      <div style="color:var(--muted)">© <span id="year2"></span> Skin Analyzer</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+
+    const quiz = document.getElementById('quiz');
+    const resultEl = document.getElementById('result');
+    const saveBtn = document.getElementById('saveBtn');
+    const historyList = document.getElementById('historyList');
+
+    function loadHistory(){
+      const raw = localStorage.getItem('skinHistory');
+      if(!raw) return [];
+      try{ return JSON.parse(raw) } catch(e){ return [] }
+    }
+
+    function renderHistory(){
+      const list = loadHistory();
+      if(!list.length){ historyList.textContent = 'No saved results yet.'; return }
+      historyList.innerHTML = '';
+      list.slice().reverse().forEach(item=>{
+        const d = document.createElement('div');
+        d.style.padding = '8px 0';
+        d.textContent = `${item.date} — ${item.type} (${item.score})`;
+        historyList.appendChild(d);
+      })
+    }
+
+    function predictSkinType(answers){
+      // simple rule-based scoring
+      const scores = {oily:0,dry:0,combination:0,sensitive:0,normal:0};
+
+      // Q1
+      if(answers.q1==='oily') scores.oily+=2;
+      if(answers.q1==='dry') scores.dry+=2;
+      if(answers.q1==='normal') scores.normal+=2;
+
+      // Q2
+      if(answers.q2==='often') scores.oily+=2;
+      if(answers.q2==='sometimes') scores.combination+=1;
+
+      // Q3
+      if(answers.q3==='yes') scores.dry+=1;
+
+      // Q4
+      if(answers.q4==='often') scores.oily+=1; if(answers.q4==='sometimes') scores.oily+=0.5;
+
+      // Q5
+      if(answers.q5==='yes') scores.combination+=2;
+
+      // Q6
+      if(answers.q6==='often') scores.sensitive+=2; if(answers.q6==='sometimes') scores.sensitive+=1;
+
+      // Q7
+      if(answers.q7==='large') scores.oily+=1; if(answers.q7==='small') scores.dry+=1;
+
+      // Q8
+      if(answers.q8==='tight') scores.dry+=1; if(answers.q8==='comfortable') scores.normal+=1;
+
+      // Q9
+      if(answers.q9==='well') scores.normal+=1; if(answers.q9==='not') scores.dry+=1;
+
+      // Q10
+      if(answers.q10==='yes') scores.sensitive+=2;
+
+      // Decide
+      const ordered = Object.keys(scores).sort((a,b)=>scores[b]-scores[a]);
+      const top = ordered[0];
+      return {type:top,score:Math.round(scores[top]*10)};
+    }
+
+    quiz.addEventListener('submit', e=>{
+      e.preventDefault();
+      const data = new FormData(quiz);
+      const answers = {};
+      for(const [k,v] of data.entries()) answers[k]=v;
+      const prediction = predictSkinType(answers);
+      resultEl.innerHTML = `<div style="background:var(--card);padding:12px;border-radius:10px;border:1px solid rgba(15,23,36,0.04)"><strong>Estimated skin type: ${prediction.type}</strong><div style="color:var(--muted);margin-top:6px">Score: ${prediction.score}</div><p style="margin-top:8px">Suggestions: ${getSuggestions(prediction.type)}</p></div>`;
+
+      // enable save button data attribute
+      saveBtn.dataset.last = JSON.stringify(prediction);
+    });
+
+    saveBtn.addEventListener('click', ()=>{
+      const raw = saveBtn.dataset.last;
+      if(!raw){ alert('Submit the quiz first to save a result.'); return }
+      const pred = JSON.parse(raw);
+      const hist = loadHistory();
+      hist.push({date:new Date().toLocaleString(),type:pred.type,score:pred.score});
+      localStorage.setItem('skinHistory',JSON.stringify(hist));
+      renderHistory();
+      alert('Result saved to history.');
+    });
+
+    function getSuggestions(type){
+      switch(type){
+        case 'oily': return 'Use a gentle foaming cleanser, lightweight moisturizer, and consider salicylic acid spot-care.';
+        case 'dry': return 'Focus on gentle hydration: moisturizer with hyaluronic acid or ceramides and avoid harsh cleansers.';
+        case 'combination': return 'Balance: lighter products on the T-zone, richer hydration on the cheeks. Try layering.';
+        case 'sensitive': return 'Choose fragrance-free, minimal-ingredient products and patch-test new items.';
+        default: return 'Maintain a simple routine: gentle cleanse, hydrate, and sun protection.';
+      }
+    }
+
+    renderHistory();
+  </script>
+</body>
+</html>

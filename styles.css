@@ -1,0 +1,66 @@
+/* Light, classic, minimal theme for Skin Analyzer */
+:root{
+  --bg:#fffaf2; /* soft cream background */
+  --card:#fffefb; /* card / surface */
+  --muted:#6b6558; /* warm muted text */
+  --accent:#c6864a; /* warm apricot accent */
+  --accent-2:#f3d6b0; /* lighter accent for gradients */
+  --glass:rgba(198,134,74,0.06);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:#0f1724;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;color:#fff;font-size:15px}
+h1.app-name{font-size:14px;margin:0}
+.tag{font-size:12px;color:var(--muted)}
+.download-buttons{display:flex;gap:8px}
+.btn{background:var(--card);color:var(--accent);padding:8px 12px;border-radius:10px;font-weight:600;font-size:13px;text-decoration:none;display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(15,23,36,0.06)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:18px 0}
+.hero-left{padding:6px}
+.kicker{display:inline-block;background:rgba(198,134,74,0.08);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:12px;margin-bottom:12px}
+h2{font-size:28px;margin:6px 0 8px;line-height:1.06}
+p.lead{color:var(--muted);margin:0 0 14px}
+.cta-row{display:flex;gap:10px;align-items:center}
+.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:12px 18px;border-radius:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(198,134,74,0.12);}
+.secondary{background:transparent;border:1px solid rgba(15,23,36,0.04);padding:10px 14px;border-radius:14px;color:var(--muted);text-decoration:none}
+
+/* Mockup */
+.device{width:260px;margin:0 auto;border-radius:26px;padding:16px;background:var(--card);box-shadow:0 10px 30px rgba(198,134,74,0.06);} 
+.screen{background:linear-gradient(180deg,#fffaf2,#fff6ee);height:520px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;border:1px solid rgba(15,23,36,0.02)}
+.screenshot{width:86%;height:86%;border-radius:14px;background:linear-gradient(180deg,#fffefb,#fffaf2);display:flex;flex-direction:column;padding:18px;border:1px solid rgba(15,23,36,0.02)}
+.mock-head{display:flex;justify-content:space-between;align-items:center}
+.pill{width:48px;height:10px;border-radius:999px;background:rgba(198,134,74,0.08)}
+.s-card{background:linear-gradient(180deg,#fffaf6,#ffffff);border-radius:12px;padding:12px;margin-top:14px;color:#0f1724;border:1px solid rgba(15,23,36,0.03);box-shadow:0 6px 18px rgba(198,134,74,0.04)}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.feature{background:var(--card);padding:14px;border-radius:14px;text-align:center;border:1px solid rgba(15,23,36,0.02);box-shadow:0 6px 18px rgba(15,23,36,0.02)}
+.feature h3{font-size:15px;margin:10px 0 6px;color:var(--accent)}
+.feature p{font-size:13px;color:var(--muted);margin:0}
+
+/* CTA strip */
+.cta-strip{display:flex;align-items:center;justify-content:space-between;padding:18px;margin-top:22px;background:linear-gradient(90deg,rgba(198,134,74,0.03),transparent);border-radius:14px;border:1px solid rgba(15,23,36,0.02)}
+.download{display:flex;gap:10px}
+
+footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+/* Responsive */
+@media(min-width:780px){
+  .hero{grid-template-columns:1fr 320px}
+  .device{margin:0}
+  .features{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:420px){
+  h2{font-size:22px}
+  .screen{height:420px}
+  .device{width:220px}
+}
