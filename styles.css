@@ -9,6 +9,9 @@
   --accent:#c46f52;
   --accent-deep:#9f543e;
   --accent-soft:#f3d7c8;
+  --appstore-blue:#0a84ff;
+  --appstore-blue-deep:#0066d6;
+  --appstore-blue-soft:rgba(10,132,255,0.14);
   --champagne:#f7e8d9;
   --leaf:#5f7b66;
   --shadow:0 24px 80px rgba(74,44,34,0.12);
@@ -140,6 +143,26 @@ button,input{font:inherit}
   box-shadow:0 16px 34px rgba(159,84,62,0.24);
 }
 
+.appstore-button{
+  background:linear-gradient(135deg,var(--appstore-blue) 0%,var(--appstore-blue-deep) 100%);
+  box-shadow:0 18px 36px rgba(10,132,255,0.28);
+}
+
+.appstore-mark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:1.2rem;
+  height:1.2rem;
+  flex:0 0 auto;
+}
+
+.appstore-mark svg{
+  width:100%;
+  height:100%;
+  fill:currentColor;
+}
+
 .secondary,
 .ghost-button{
   display:inline-flex;
@@ -159,7 +182,10 @@ button,input{font:inherit}
 }
 
 .hero{
-  display:block;
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(320px,0.98fr);
+  align-items:center;
+  gap:28px;
   padding:56px 0 24px;
 }
 
@@ -200,6 +226,34 @@ button,input{font:inherit}
   margin-top:28px;
 }
 
+.hero-list{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hero-list span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  color:var(--text);
+  font-size:0.92rem;
+  font-weight:700;
+  background:rgba(255,255,255,0.58);
+  border:1px solid rgba(79,45,34,0.08);
+}
+
+.hero-list span::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--appstore-blue),#7bc5ff);
+}
+
 .micro-proof{
   display:flex;
   gap:18px;
@@ -228,6 +282,91 @@ button,input{font:inherit}
   grid-template-columns:repeat(3,1fr);
   gap:14px;
   margin-top:18px;
+}
+
+.hero-visual{
+  position:relative;
+  min-width:0;
+}
+
+.phone-stage{
+  position:relative;
+  min-height:760px;
+  padding:24px 18px;
+  border-radius:40px;
+  background:
+    radial-gradient(circle at top right, rgba(10,132,255,0.16), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(196,111,82,0.14), transparent 36%),
+    rgba(255,251,247,0.66);
+  border:1px solid rgba(255,255,255,0.58);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.phone-stage::before{
+  content:"";
+  position:absolute;
+  inset:22px;
+  border-radius:32px;
+  border:1px dashed rgba(122,104,97,0.18);
+  pointer-events:none;
+}
+
+.phone-card{
+  position:absolute;
+  margin:0;
+  border-radius:34px;
+  overflow:hidden;
+  background:#120f15;
+  border:10px solid #120f15;
+  box-shadow:0 28px 60px rgba(42,27,25,0.24);
+}
+
+.phone-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.phone-main{
+  z-index:2;
+  top:82px;
+  left:32px;
+  width:min(46vw,318px);
+  aspect-ratio:1206 / 2622;
+  transform:rotate(-5deg);
+}
+
+.phone-float{
+  width:min(35vw,228px);
+  aspect-ratio:1206 / 2622;
+}
+
+.phone-bottom{
+  z-index:1;
+  right:34px;
+  bottom:24px;
+  transform:rotate(8deg);
+}
+
+.preview-note{
+  margin-top:18px;
+  padding:18px 20px;
+  border-radius:24px;
+  background:rgba(255,250,245,0.66);
+  border:1px solid rgba(79,45,34,0.08);
+  box-shadow:0 14px 30px rgba(94,63,51,0.08);
+}
+
+.preview-note strong{
+  display:block;
+  font-size:1rem;
+}
+
+.preview-note p{
+  margin:8px 0 0;
+  color:var(--muted);
+  line-height:1.7;
 }
 
 .stat{
@@ -279,6 +418,53 @@ button,input{font:inherit}
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
+}
+
+.compact-feature-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.screenshot-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+
+.screen-card{
+  display:grid;
+  gap:14px;
+  padding:18px;
+  border-radius:var(--radius-xl);
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,0.46);
+  backdrop-filter:blur(22px);
+  box-shadow:0 16px 40px rgba(94,63,51,0.08);
+}
+
+.screen-frame{
+  border-radius:28px;
+  overflow:hidden;
+  background:#110f14;
+  border:8px solid #110f14;
+  aspect-ratio:1206 / 2622;
+  box-shadow:0 18px 42px rgba(29,22,27,0.16);
+}
+
+.screen-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.screen-copy strong{
+  display:block;
+  font-size:1rem;
+}
+
+.screen-copy p{
+  margin:8px 0 0;
+  color:var(--muted);
+  line-height:1.7;
 }
 
 .feature-card,
@@ -414,6 +600,16 @@ button,input{font:inherit}
   line-height:1.8;
 }
 
+.appstore-bullet{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left:-2px;
+  color:var(--appstore-blue-deep);
+  font-weight:700;
+  list-style:none;
+}
+
 .site-footer{
   display:flex;
   justify-content:space-between;
@@ -431,6 +627,17 @@ button,input{font:inherit}
 
 .footer-links a{
   text-decoration:none;
+}
+
+.appstore-footer-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:999px;
+  color:var(--appstore-blue-deep);
+  background:var(--appstore-blue-soft);
+  border:1px solid rgba(10,132,255,0.18);
 }
 
 .mini-hero{
@@ -697,14 +904,27 @@ button,input{font:inherit}
 }
 
 @media (max-width:1080px){
+  .hero,
   .flow-grid,
   .quiz-layout,
   .cta-banner{
     grid-template-columns:1fr;
   }
 
+  .screenshot-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   .feature-grid{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  .phone-stage{
+    min-height:680px;
+  }
+
+  .phone-main{
+    left:40px;
   }
 }
 
@@ -728,6 +948,7 @@ button,input{font:inherit}
 
   .stats-row,
   .feature-grid,
+  .screenshot-grid,
   .choices{
     grid-template-columns:1fr;
   }
@@ -737,5 +958,42 @@ button,input{font:inherit}
   .flow-card,
   .feature-card{
     padding:22px;
+  }
+
+  .hero{
+    gap:22px;
+    padding-top:34px;
+  }
+
+  .hero-copy h2{
+    font-size:clamp(3rem,15vw,4.3rem);
+  }
+
+  .phone-stage{
+    min-height:620px;
+    padding:20px 14px;
+  }
+
+  .phone-stage::before{
+    inset:14px;
+  }
+
+  .phone-main{
+    left:14px;
+    top:96px;
+    width:min(56vw,264px);
+  }
+
+  .phone-float{
+    width:min(42vw,176px);
+  }
+
+  .phone-bottom{
+    right:12px;
+    bottom:26px;
+  }
+
+  .screen-card{
+    padding:16px;
   }
 }
