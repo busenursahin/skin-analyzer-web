@@ -105,9 +105,21 @@ button,input{font:inherit}
 .nav{
   display:flex;
   align-items:center;
-  gap:10px;
-  flex-wrap:wrap;
+  gap:8px;
+  flex-wrap:nowrap;
   justify-content:flex-end;
+}
+
+.nav a{
+  white-space:nowrap;
+}
+
+.nav .pill-link{
+  padding:10px 14px;
+}
+
+.nav .appstore-button{
+  padding:13px 18px;
 }
 
 .pill-link,
@@ -943,6 +955,7 @@ button,input{font:inherit}
 
   .nav{
     width:100%;
+    flex-wrap:wrap;
     justify-content:flex-start;
   }
 
