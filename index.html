@@ -3,153 +3,233 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skin Analyzer — Mobile App</title>
+  <title>FaceGlow — AI Skin Analysis App</title>
+  <meta name="description" content="FaceGlow is a modern skin analysis app that turns a selfie into elegant, personalized skincare insights in seconds." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">SA</div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="logo" src="logo.jpg" alt="FaceGlow logo" />
         <div>
-          <h1 class="app-name">Skin Analyzer</h1>
-          <div class="tag">AI-powered skincare insights</div>
+          <h1 class="app-name">FaceGlow</h1>
+          <div class="tag">AI-powered skin clarity, styled like a luxury beauty app</div>
         </div>
-      </div>
-      <nav class="download-buttons">
-        <a class="btn" href="skin-quiz.html">Take the Skin Quiz</a>
+      </a>
+
+      <nav class="nav">
+        <a class="pill-link" href="#experience">Experience</a>
+        <a class="pill-link" href="#how-it-works">How it works</a>
+        <a class="pill-link" href="skin-quiz.html">Skin Type Test</a>
+        <a class="primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Download on the App Store</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-left">
-          <span class="kicker">New • Launch Offer</span>
-          <h2>Understand your skin. Healthier skin.</h2>
-          <p class="lead">Upload a selfie to get an instant, science-backed skin analysis and gentle, actionable suggestions (for example: try hyaluronic acid). Dermatologist-informed.</p>
+        <div class="hero-copy">
+          <span class="eyebrow">Professional skin analysis in seconds</span>
+          <h2>Transform your skincare routine with a more elevated AI skin scanner.</h2>
+          <p class="lead">FaceGlow uses advanced artificial intelligence to analyze your face and deliver polished, dermatologist-level cosmetic insights in a short time. Discover your skin type, review detailed parameters, track progress, and receive personalized skincare recommendations in a premium app experience.</p>
 
-          <div class="cta-row">
-            <a class="primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Get the app</a>
-            <a class="secondary" href="#features">How it works</a>
+          <div class="hero-actions">
+            <a class="primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Get FaceGlow</a>
+            <a class="secondary" href="skin-quiz.html">Take the fun skin type test</a>
           </div>
 
-          <div class="features" style="margin-top:18px">
-            <div class="feature">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <h3>Instant Analysis</h3>
-              <p>Fast skin-type & concerns detection from a single photo.</p>
+          <div class="micro-proof">
+            <span>AI-powered skin analysis</span>
+            <span>Designed for a luxury app feel</span>
+            <span>Quick quiz linked right from home</span>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <strong>Short wait</strong>
+              <span>Get your AI skin readout in seconds, depending on the scan</span>
             </div>
-            <div class="feature">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <h3>Actionable Suggestions</h3>
-              <p>Practical, easy-to-try tips you can apply right away.</p>
+            <div class="stat">
+              <strong>10 parameters</strong>
+              <span>More complete skin assessment across multiple visible concerns</span>
             </div>
-            <div class="feature">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <h3>Dermatologist-informed</h3>
-              <p>Recommendations and explanations reviewed by skin experts.</p>
+            <div class="stat">
+              <strong>7 languages</strong>
+              <span>English, Turkish, Arabic, German, Italian, Greek, and Korean</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="device" aria-hidden>
-          <div class="screen" role="img" aria-label="App mockup">
-            <div class="screenshot">
-              <div class="mock-head">
-                <div style="color:var(--muted);font-size:12px">Today</div>
-                <div class="pill"></div>
+      <section class="section">
+        <div class="legal-callout">
+          <strong>Important disclaimer</strong>
+          <p>This app provides general cosmetic and skincare information for educational purposes only. It does not provide medical diagnosis, treatment, or professional dermatological advice, is not a medical device, and should not be used to diagnose or treat any skin condition. Always consult a qualified dermatologist or physician for any skin health concerns or before making medical decisions.</p>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <h3>Why FaceGlow?</h3>
+          <p>The homepage now reflects the real product story more accurately: instant AI scanning, broader analysis coverage, personalized skin scoring, progress tracking, multilingual support, and a clearer entry to the quiz and app download.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon-badge">01</div>
+            <h4>Instant AI skin scanner</h4>
+            <p>Get results in seconds through a beauty-first experience that still feels polished, modern, and easy to trust.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">02</div>
+            <h4>10-parameter analysis</h4>
+            <p>Move beyond a few surface indicators with a more complete visible-skin assessment across multiple concerns.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">03</div>
+            <h4>Personalized skin score</h4>
+            <p>Track improvement over time with skin scoring and richer progress context across repeated scans.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">04</div>
+            <h4>Expert recommendations</h4>
+            <p>Receive custom skincare guidance designed to help shape routines around your visible skin signals.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">05</div>
+            <h4>Progress tracking</h4>
+            <p>See your transformation over time and use FaceGlow as a companion for skincare habit building.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">06</div>
+            <h4>Skin type test on home</h4>
+            <p>The playful skin test stays front and center on the homepage as a fun first interaction before the full app experience.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">07</div>
+            <h4>Premium experience</h4>
+            <p>Supports unlimited analyses, fuller history tracking, advanced recommendations, ad-free use, and priority support.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">08</div>
+            <h4>7 language support</h4>
+            <p>Designed for a broader audience with English, Turkish, Arabic, German, Italian, Greek, and Korean support.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-badge">09</div>
+            <h4>Elegant beauty-tech design</h4>
+            <p>Soft champagne gradients, glass surfaces, and editorial typography give the product a more premium landing-page presence.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="flow-grid">
+          <article class="flow-card">
+            <div class="section-heading" style="margin-bottom:0;">
+              <h3 style="font-size:2.8rem;">How FaceGlow works</h3>
+              <p>Built to be quick, clear, and useful for everyday routine tracking without losing the premium feel of the product.</p>
+            </div>
+
+            <div class="step-list">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <h4>Open the camera and position your face</h4>
+                  <p>Start with a guided capture flow that helps frame the face for a cleaner AI analysis.</p>
+                </div>
               </div>
-
-              <div class="s-card" style="margin-top:14px">
-                <strong style="display:block">Skin Score: 78</strong>
-                <small style="color:var(--muted);">Hydration: Good • Texture: Smooth</small>
-                <p style="margin-top:8px;color:#bfeee0;font-size:13px">Try the recommended 3-step evening routine to improve hydration and reduce redness.</p>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <h4>Let AI analyze your skin instantly</h4>
+                  <p>FaceGlow scans visible skin concerns and assembles a more detailed cosmetic insight set in seconds.</p>
+                </div>
               </div>
-
-              <div style="flex:1"></div>
-
-              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
-                <div style="font-size:12px;color:var(--muted)">Recommendations</div>
-                <div style="display:flex;gap:8px">
-                  <div style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.04)"></div>
-                  <div style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.04)"></div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <h4>Get detailed results and a skin score</h4>
+                  <p>Review a more complete scorecard that helps you understand how your skin is presenting right now.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                  <h4>Receive personalized recommendations</h4>
+                  <p>Use custom routine suggestions to evaluate products, refine habits, and support your skincare goals.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">5</div>
+                <div>
+                  <h4>Track your skin journey</h4>
+                  <p>Compare progress over time to monitor changes, product effectiveness, and routine consistency.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
+
+          <aside class="flow-card routine-panel">
+            <div class="routine-item">
+              <small>What we analyze</small>
+              <p>Acne and breakouts, wrinkles and fine lines, dark circles, pores, texture, redness, sensitivity, dryness, hydration, oiliness, shine, brown spots, pigmentation, and firmness signals.</p>
+            </div>
+            <div class="routine-item">
+              <small>Perfect for</small>
+              <p>Tracking your skincare routine, monitoring visible skin changes over time, and checking how products are working for you.</p>
+            </div>
+            <div class="routine-item">
+              <small>Premium</small>
+              <p>Unlimited analyses, full history tracking, advanced AI recommendations, ad-free use, and priority support.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section id="features" style="margin-top:18px">
-        <h3 style="margin:6px 0 8px">How it works</h3>
-        <p class="lead" style="margin-bottom:12px">Snap a photo and receive soft, practical suggestions you can try at home.</p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
-            <strong>1. Capture</strong>
-            <p style="color:var(--muted);margin-top:6px">Take a guided selfie under natural light. The app detects framing & lighting automatically.</p>
-          </div>
-          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
-            <strong>2. Analyze</strong>
-            <p style="color:var(--muted);margin-top:6px">On-device AI evaluates skin tone, texture, redness, and hydration.</p>
-          </div>
-          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
-            <strong>3. Suggestions</strong>
-            <p style="color:var(--muted);margin-top:6px">Get gentle, implementable tips (e.g. consider using hyaluronic acid for hydration).</p>
-          </div>
-          <div style="background:rgba(15,23,36,0.02);padding:12px;border-radius:12px">
-            <strong>4. Track</strong>
-            <p style="color:var(--muted);margin-top:6px">Save results and view history to monitor changes and progress over time.</p>
-          </div>
+      <section class="cta-banner">
+        <div>
+          <h4>Start with the app, or play with the skin type test first.</h4>
+          <p>If someone lands here before downloading, they now have a fun entry point: the skin type test. It gives the site more personality and creates a natural bridge into the full FaceGlow experience.</p>
         </div>
-
-        <div class="cta-strip">
-          <div>
-            <strong>Ready to start?</strong>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">Download Skin Analyzer and take your first photo in under a minute.</div>
-          </div>
-          <div class="download">
-            <a class="primary" href="#download">Download</a>
-            <a class="secondary" href="#privacy">Privacy</a>
+        <div class="cta-panel">
+          <ul>
+            <li>Take the interactive skin type test</li>
+            <li>Download FaceGlow from the App Store</li>
+            <li>Review privacy and terms before launch</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:18px;">
+            <a class="primary" href="skin-quiz.html">Open Skin Type Test</a>
+            <a class="secondary" href="privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
       </section>
-
-      <section id="download" style="margin-top:18px">
-        <h3 style="margin:6px 0 8px">Download</h3>
-        <p class="lead" style="margin-bottom:12px">Available on the App Store. Use the "Get the app" button above to start the download.</p>
-      </section>
-
     </main>
 
-    <footer>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
-        <div style="display:flex;gap:12px;align-items:center">
-          <a href="privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy Policy</a>
-          <a href="terms-of-use.html" style="color:var(--muted);text-decoration:none">Terms of Use</a>
-          <a href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766" style="color:var(--muted);text-decoration:none">App Store</a>
-        </div>
-        <div style="color:var(--muted)">© <span id="year"></span> Skin Analyzer</div>
+    <footer class="site-footer">
+      <div>© <span id="year"></span> FaceGlow</div>
+      <div class="footer-links">
+        <a href="skin-quiz.html">Skin Type Test</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">App Store</a>
       </div>
     </footer>
   </div>
 
   <script>
-    // Small helpers
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple focus state for accessibility
-    document.querySelectorAll('a,button').forEach(el=>el.addEventListener('focus',()=>el.style.boxShadow='0 6px 18px rgba(0,0,0,0.35)'))
-
-    // Idle JS: hit a fake animation to make the hero lively
-    // (kept tiny and optional for performance on mobile)
-    const device = document.querySelector('.device');
-    if(device){
-      let t=0;setInterval(()=>{t=(t+1)%360;device.style.transform=`rotate(${Math.sin(t/20)}deg)`},4500)
-    }
   </script>
 </body>
 </html>

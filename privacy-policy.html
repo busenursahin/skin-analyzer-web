@@ -1,373 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Skin Analyzer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1d1d1f;
-            background-color: #ffffff;
-        }
-
-        /* Header Styles - matching main site */
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 40px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .brand:hover {
-            opacity: 0.8;
-        }
-
-        .logo {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .app-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin: 0;
-        }
-
-        .tag {
-            font-size: 12px;
-            color: #6b7280;
-        }
-
-        /* Content Container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            color: #1d1d1f;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .last-updated {
-            color: #6b7280;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            font-size: 1.8em;
-            color: #1d1d1f;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        h3 {
-            font-size: 1.3em;
-            color: #1d1d1f;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            color: #1d1d1f;
-        }
-        
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .highlight-box {
-            background-color: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 6px;
-        }
-        
-        .highlight-box h3 {
-            margin-top: 0;
-            color: #2563eb;
-        }
-        
-        .no-data-badge {
-            display: inline-block;
-            background-color: #10b981;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9em;
-            margin: 10px 5px 10px 0;
-        }
-        
-        strong {
-            color: #1d1d1f;
-            font-weight: 600;
-        }
-        
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer Styles - matching main site */
-        footer {
-            border-top: 1px solid #e5e7eb;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        footer a {
-            color: #6b7280;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        footer a:hover {
-            color: #2563eb;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .copyright {
-            color: #6b7280;
-            text-align: center;
-            margin-top: 16px;
-            font-size: 14px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FaceGlow Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for FaceGlow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <a href="index.html" class="brand">
-                <div class="logo">SA</div>
-                <div>
-                    <h1 class="app-name">Skin Analyzer</h1>
-                    <div class="tag">AI-powered skincare insights</div>
-                </div>
-            </a>
-        </header>
-
-        <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated"><strong>Last updated:</strong> October 30, 2025</p>
-
-        <div class="highlight-box">
-            <h3>🔒 Our Privacy Commitment</h3>
-            <p><strong>We do NOT collect, store, or retain ANY of your data.</strong></p>
-            <span class="no-data-badge">✓ Zero Data Storage</span>
-            <span class="no-data-badge">✓ No User Tracking</span>
-            <span class="no-data-badge">✓ Complete Privacy</span>
+  <div class="page-shell legal-wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="logo" src="logo.jpg" alt="FaceGlow logo" />
+        <div>
+          <h1 class="app-name">FaceGlow</h1>
+          <div class="tag">Privacy-first skin analysis experience</div>
         </div>
+      </a>
 
-        <h2>Overview</h2>
-        <p>This Privacy Policy explains how Skin Analyzer (the "App") processes photos to provide skin analysis insights. We are committed to protecting your privacy and maintaining the highest standards of data security.</p>
-        <p><strong>Key principle: We process your photos in real-time for analysis and immediately delete them. We do not store any facial images, analysis results, or personal information on our servers.</strong></p>
+      <nav class="nav">
+        <a class="pill-link" href="index.html">Home</a>
+        <a class="pill-link" href="skin-quiz.html">Skin Type Test</a>
+        <a class="primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Download App</a>
+      </nav>
+    </header>
 
-        <h2>What Data We Do NOT Collect or Store</h2>
-        <p>To be absolutely clear, we do <strong>NOT</strong> collect, process, or store:</p>
-        <ul>
-            <li><strong>❌ Facial photographs</strong> - Images are processed in real-time and immediately deleted</li>
-            <li><strong>❌ Analysis results</strong> - Results are displayed to you but not saved on our servers</li>
-            <li><strong>❌ Names or email addresses</strong> - We don't ask for or store any personal identifiers</li>
-            <li><strong>❌ Location data</strong> - We don't track where you are</li>
-            <li><strong>❌ Device identifiers</strong> - We don't track your device</li>
-            <li><strong>❌ Usage analytics</strong> - We don't monitor how you use the app</li>
-            <li><strong>❌ User accounts or profiles</strong> - No registration or login required</li>
-            <li><strong>❌ Any personally identifiable information (PII)</strong></li>
-        </ul>
+    <main class="legal-card">
+      <h1>1. Privacy Policy (Gizlilik Politikası)</h1>
+      <div class="legal-meta">Last Updated: March 25, 2026</div>
 
-        <h2>Face Data Collection and Use</h2>
+      <div class="legal-callout">
+        <strong>Our core privacy principle</strong>
+        <p>We do not collect or store your personal identity data.</p>
+      </div>
 
-        <h3>What We Temporarily Process (Not Store)</h3>
-        <p>When you use Skin Analyzer, you can voluntarily submit facial photographs for skin analysis purposes. We collect only the images you explicitly select for analysis. These images are:</p>
-        <ul>
-            <li>Processed in real-time (typically less than 30 seconds)</li>
-            <li>Never saved to disk or database</li>
-            <li>Held only in temporary server memory during processing</li>
-            <li>Immediately and permanently deleted after analysis</li>
-        </ul>
+      <h2>1. Introduction</h2>
+      <p>FaceGlow is committed to protecting your privacy. This policy explains how we process your information. Our core principle is: We do not collect or store your personal identity data.</p>
 
-        <h3>How We Use Face Data</h3>
-        <p>Your facial images are used <strong>exclusively</strong> for:</p>
-        <ul>
-            <li>Real-time skin condition analysis (acne, wrinkles, pigmentation, texture, pores, etc.)</li>
-            <li>Generating your personalized skin health score</li>
-            <li>Providing tailored skincare recommendations</li>
-        </ul>
+      <h2>2. Data Collection and Processing</h2>
+      <p><strong>Visual Data:</strong> To provide skin analysis, the app requires access to your camera. Photos taken are transmitted via secure, encrypted channels to authorized AI service providers for real-time analysis.</p>
+      <p><strong>Transient Processing:</strong> Images are processed temporarily to generate your skin report. Once the analysis is complete and delivered to your device, the images are automatically deleted from the processing servers.</p>
+      <p><strong>No Training:</strong> Your visual data is not used to train or improve AI models.</p>
+      <p><strong>Account Data:</strong> We do not collect names, emails, or addresses. No account creation is required.</p>
 
-        <p>Face data is <strong>NEVER</strong> used for:</p>
-        <ul>
-            <li>Facial recognition or identity verification</li>
-            <li>Building databases or user profiles</li>
-            <li>Marketing, advertising, or promotional purposes</li>
-            <li>Training AI models</li>
-            <li>Sharing with advertisers or data brokers</li>
-            <li>Any purpose unrelated to your immediate skin analysis request</li>
-        </ul>
+      <h2>3. Data Security</h2>
+      <p>All data transmission is protected using industry-standard SSL/TLS encryption. We do not sell or share your data with third-party advertisers.</p>
 
-        <h2>How We Process Your Photos</h2>
-        <p>To provide skin analysis, photos are processed on our secure backend servers using AI technology. The process:</p>
-        <ul>
-            <li>Your photo is securely transmitted to our backend infrastructure</li>
-            <li>Our servers analyze the image in real-time</li>
-            <li>Analysis results are returned to you immediately</li>
-            <li>Images are deleted immediately after processing</li>
-        </ul>
+      <h2>4. User Control</h2>
+      <p>You can revoke camera permissions at any time through your device settings. Deleting the app removes all locally stored analysis history.</p>
 
-        <h2>Data Retention</h2>
-        <ul>
-            <li><strong>Facial photographs:</strong> NOT STORED. Processed in real-time and immediately deleted (typically within 30 seconds).</li>
-            <li><strong>Analysis results:</strong> NOT STORED. Displayed in real-time only.</li>
-            <li><strong>Personal information:</strong> NOT COLLECTED.</li>
-            <li><strong>Usage logs:</strong> NOT STORED.</li>
-        </ul>
+      <h2>5. Contact</h2>
+      <p>For privacy inquiries: <a href="mailto:softechabn@gmail.com">softechabn@gmail.com</a></p>
+    </main>
 
-        <h2>Security</h2>
-        <ul>
-            <li>Images exist in server memory only during processing (never written to disk)</li>
-            <li>All transmissions are encrypted using TLS/SSL</li>
-            <li>We cannot access historical data because we don't store it</li>
-        </ul>
-
-        <h2>Local Device Storage</h2>
-        <p>If you save analysis results locally on your device:</p>
-        <ul>
-            <li>Data stays only on your device</li>
-            <li>Not transmitted to our servers</li>
-            <li>You can delete it anytime</li>
-        </ul>
-
-        <h2>Payments</h2>
-        <p>Payments are handled by Apple App Store. We do not receive or store your payment information.</p>
-
-
-        <h2>Your Privacy Rights</h2>
-        <p>Since we don't store any data, there is no data to access, modify, or delete from our servers. Your privacy is protected by design.</p>
-
-        <h2>International Data Transfer</h2>
-        <p>Photos are temporarily processed on servers during analysis. All data is immediately deleted after processing.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update this policy from time to time. Significant changes will be communicated through the app.</p>
-
-        <h2>Contact</h2>
-        <p>Questions? Contact us at: <a href="mailto:softechabn@gmail.com">softechabn@gmail.com</a></p>
-
-        <div class="highlight-box" style="margin-top: 40px;">
-            <h3>Summary</h3>
-            <p><strong>Skin Analyzer is designed with privacy at its core:</strong></p>
-            <ul>
-                <li>✓ We process your photos in real-time only</li>
-                <li>✓ We don't store any facial images</li>
-                <li>✓ We don't store any analysis results</li>
-                <li>✓ We don't collect any personal information</li>
-                <li>✓ Images are immediately deleted after processing</li>
-                <li>✓ Your privacy is protected by design</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <div class="wrap">
-            <div style="display:flex;flex-direction:column;gap:16px;align-items:center">
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-use.html">Terms of Use</a>
-                    <a href="https://apps.apple.com/app/idYOUR_APP_ID">App Store</a>
-                </div>
-                <div class="copyright">© <span id="year"></span> Skin Analyzer</div>
-            </div>
-        </div>
+    <footer class="site-footer">
+      <div>© <span id="yearp"></span> FaceGlow</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+      </div>
     </footer>
-</div>
+  </div>
 
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('yearp').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
