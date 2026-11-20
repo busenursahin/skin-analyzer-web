@@ -1,337 +1,256 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="software" data-radius="round" data-buttons="arrow" data-motion>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FaceGlow Skin Type Test</title>
-  <meta name="description" content="Take FaceGlow's playful skin type test to estimate whether your skin is oily, dry, combination, normal, or sensitive." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FaceGlow: skin type quiz in 10 questions</title>
+<meta name="description" content="Answer 10 quick questions and get an estimate of your skin type, with one routine tip for it. Free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FaceGlow: skin type quiz in 10 questions">
+<meta property="og:description" content="Answer 10 quick questions and get an estimate of your skin type, with one routine tip for it. Free, in your browser.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f9f8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="inner.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="index.html">
-        <img class="logo" src="logo.jpg" alt="FaceGlow logo" />
-        <div>
-          <h1 class="app-name">FaceGlow</h1>
-          <div class="tag">Playful skin type check, wrapped in a premium look</div>
-        </div>
-      </a>
-
-      <nav class="nav">
-        <a class="pill-link" href="index.html">Home</a>
-        <a class="pill-link" href="privacy-policy.html">Privacy</a>
-        <a class="primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Get the app</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="mini-hero">
-        <div>
-          <span class="eyebrow">FaceGlow skin type test</span>
-          <h2>Find your skin mood in 10 fun taps.</h2>
-          <p>This page now looks much more playful and app-like: soft cards, choice chips, a live progress bar, and a more polished result state that makes the quiz feel intentional instead of plain.</p>
-        </div>
-        <a class="secondary" href="index.html">Back to homepage</a>
-      </section>
-
-      <section class="quiz-layout">
-        <aside class="quiz-shell">
-          <span class="quiz-badge">Quick beauty-tech check-in</span>
-          <h3>Before you scan, get a vibe check on your skin type.</h3>
-          <p>Pick the answers that sound most like your everyday skin. Once you submit, FaceGlow estimates your type and gives lightweight routine guidance you can save locally.</p>
-
-          <div class="quiz-highlight">
-            <div class="quiz-teaser">
-              <strong>What you'll get</strong>
-              <p class="muted">An estimated type, a score, and suggestions for oily, dry, combination, normal, or sensitive skin.</p>
-            </div>
-            <div class="quiz-teaser">
-              <strong>Progress</strong>
-              <div class="progress-track"><span id="progressFill"></span></div>
-              <p class="muted" id="progressText">0 of 10 answered</p>
-            </div>
-            <div class="quiz-teaser">
-              <strong>Nice with the homepage flow</strong>
-              <p class="muted">The home screen now links here directly, so the quiz works as an engaging entry point to the app.</p>
-            </div>
-          </div>
-        </aside>
-
-        <section class="quiz-shell">
-          <form id="quiz" aria-label="Skin type quiz">
-            <div class="question-card">
-              <fieldset>
-                <legend>1. How does your skin usually feel by midday?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q1" value="oily" required><span>Shiny and oily</span></label>
-                  <label class="choice"><input type="radio" name="q1" value="dry"><span>Tight or dry</span></label>
-                  <label class="choice"><input type="radio" name="q1" value="normal"><span>Pretty balanced</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>2. How often do you notice shine on your face?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q2" value="often" required><span>Very often</span></label>
-                  <label class="choice"><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label>
-                  <label class="choice"><input type="radio" name="q2" value="rarely"><span>Rarely</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>3. Do flaky or rough patches show up on your skin?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q3" value="yes" required><span>Yes, often enough</span></label>
-                  <label class="choice"><input type="radio" name="q3" value="no"><span>Not really</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>4. Are breakouts part of your regular skin story?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q4" value="often" required><span>Often</span></label>
-                  <label class="choice"><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label>
-                  <label class="choice"><input type="radio" name="q4" value="rarely"><span>Rarely</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>5. Is your T-zone oily while your cheeks stay drier?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q5" value="yes" required><span>Yes, that's me</span></label>
-                  <label class="choice"><input type="radio" name="q5" value="no"><span>No, more even</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>6. Does new skincare trigger redness or irritation?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q6" value="often" required><span>Often</span></label>
-                  <label class="choice"><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label>
-                  <label class="choice"><input type="radio" name="q6" value="rarely"><span>Rarely</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>7. How visible are your pores?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q7" value="large" required><span>Quite visible</span></label>
-                  <label class="choice"><input type="radio" name="q7" value="moderate"><span>Somewhere in between</span></label>
-                  <label class="choice"><input type="radio" name="q7" value="small"><span>Small or subtle</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>8. Right after washing, your skin feels...</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q8" value="tight" required><span>Tight and thirsty</span></label>
-                  <label class="choice"><input type="radio" name="q8" value="comfortable"><span>Comfortable</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>9. How hydrated does your skin usually look?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q9" value="well" required><span>Fresh and hydrated</span></label>
-                  <label class="choice"><input type="radio" name="q9" value="somewhat"><span>Somewhat hydrated</span></label>
-                  <label class="choice"><input type="radio" name="q9" value="not"><span>A bit dull or dry</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="question-card">
-              <fieldset>
-                <legend>10. Do you deal with visible redness or sensitivity?</legend>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="q10" value="yes" required><span>Yes</span></label>
-                  <label class="choice"><input type="radio" name="q10" value="no"><span>No</span></label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="quiz-actions">
-              <button type="submit" class="primary">Reveal my result</button>
-              <button type="button" id="saveBtn" class="secondary">Save result</button>
-              <a href="index.html" class="btn">Return home</a>
-            </div>
-          </form>
-
-          <div id="result"></div>
-
-          <section class="history-card">
-            <h4 style="margin:0;">Saved history</h4>
-            <p class="muted" style="margin-top:8px;">Results are stored locally on this device so users can revisit earlier quiz outcomes.</p>
-            <div id="historyList" style="margin-top:8px;"></div>
-          </section>
-        </section>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>© <span id="year2"></span> FaceGlow</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-use.html">Terms of Use</a>
-      </div>
-    </footer>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="index.html"><img src="img/logo-96.png" alt="" width="32" height="32">FaceGlow</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="index.html#app">App</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html#signals">Features</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html#privacy">Privacy</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html#questions">Questions</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link" href="skin-quiz.html" aria-current="page">Skin quiz</a>
+      <a class="btn btn--primary" href="https://apps.apple.com/us/app/faceglow-ai-skin-scanner/id6754194766">Download the app</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
   </div>
+</header>
 
-  <script>
-    document.getElementById('year2').textContent = new Date().getFullYear();
-
-    const quiz = document.getElementById('quiz');
-    const resultEl = document.getElementById('result');
-    const saveBtn = document.getElementById('saveBtn');
-    const historyList = document.getElementById('historyList');
-    const progressFill = document.getElementById('progressFill');
-    const progressText = document.getElementById('progressText');
-
-    function loadHistory() {
-      const raw = localStorage.getItem('skinHistory');
-      if (!raw) return [];
-      try {
-        return JSON.parse(raw);
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function renderHistory() {
-      const list = loadHistory();
-      if (!list.length) {
-        historyList.innerHTML = '<div class="muted">No saved results yet.</div>';
-        return;
-      }
-
-      historyList.innerHTML = '';
-      list.slice().reverse().forEach((item) => {
-        const d = document.createElement('div');
-        d.className = 'history-item';
-        d.innerHTML = `<span>${item.date}</span><strong>${item.type} · ${item.score}</strong>`;
-        historyList.appendChild(d);
-      });
-    }
-
-    function predictSkinType(answers) {
-      const scores = { oily: 0, dry: 0, combination: 0, sensitive: 0, normal: 0 };
-
-      if (answers.q1 === 'oily') scores.oily += 2;
-      if (answers.q1 === 'dry') scores.dry += 2;
-      if (answers.q1 === 'normal') scores.normal += 2;
-
-      if (answers.q2 === 'often') scores.oily += 2;
-      if (answers.q2 === 'sometimes') scores.combination += 1;
-
-      if (answers.q3 === 'yes') scores.dry += 1;
-
-      if (answers.q4 === 'often') scores.oily += 1;
-      if (answers.q4 === 'sometimes') scores.oily += 0.5;
-
-      if (answers.q5 === 'yes') scores.combination += 2;
-
-      if (answers.q6 === 'often') scores.sensitive += 2;
-      if (answers.q6 === 'sometimes') scores.sensitive += 1;
-
-      if (answers.q7 === 'large') scores.oily += 1;
-      if (answers.q7 === 'small') scores.dry += 1;
-
-      if (answers.q8 === 'tight') scores.dry += 1;
-      if (answers.q8 === 'comfortable') scores.normal += 1;
-
-      if (answers.q9 === 'well') scores.normal += 1;
-      if (answers.q9 === 'not') scores.dry += 1;
-
-      if (answers.q10 === 'yes') scores.sensitive += 2;
-
-      const ordered = Object.keys(scores).sort((a, b) => scores[b] - scores[a]);
-      const top = ordered[0];
-      return { type: top, score: Math.round(scores[top] * 10) };
-    }
-
-    function getSuggestions(type) {
-      switch (type) {
-        case 'oily':
-          return 'Use a gentle foaming cleanser, keep hydration light, and consider salicylic acid for breakout-prone areas.';
-        case 'dry':
-          return 'Lean into barrier-friendly hydration with ceramides, hyaluronic acid, and low-stripping cleansers.';
-        case 'combination':
-          return 'Balance your routine: lighter layers on the T-zone, richer moisture where your skin feels drier.';
-        case 'sensitive':
-          return 'Keep things fragrance-free, patch-test new products, and favor calming, minimal-ingredient formulas.';
-        default:
-          return 'Maintain a steady routine with gentle cleansing, hydration, and daily sun protection.';
-      }
-    }
-
-    function updateProgress() {
-      const answered = new Set();
-      new FormData(quiz).forEach((value, key) => {
-        if (value) answered.add(key);
-      });
-      const total = 10;
-      const count = answered.size;
-      progressFill.style.width = `${(count / total) * 100}%`;
-      progressText.textContent = `${count} of ${total} answered`;
-    }
-
-    quiz.addEventListener('change', updateProgress);
-
-    quiz.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(quiz);
-      const answers = {};
-      for (const [k, v] of data.entries()) answers[k] = v;
-      const prediction = predictSkinType(answers);
-      resultEl.innerHTML = `
-        <div class="result-card">
-          <strong>Estimated skin type: ${prediction.type}</strong>
-          <div class="result-meta">
-            <div class="result-chip">Score ${prediction.score}</div>
-            <div class="result-chip">FaceGlow quiz result</div>
-          </div>
-          <p style="margin:14px 0 0;color:var(--muted);line-height:1.8;">${getSuggestions(prediction.type)}</p>
+<main id="top" class="page">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Skin type quiz in 10 questions</h1>
+      <p>Answer 10 questions about how your skin feels day to day and get an estimate of your type: oily, dry, combination, normal or sensitive.</p>
+    </header>
+    <div class="grid quiz-grid">
+      <aside class="quiz-side span-4">
+        <div class="progress" aria-live="polite">
+          <div class="progress__label"><b>Answered</b><span id="progressCount">0 of 10</span></div>
+          <div class="progress__track"><span class="progress__fill" id="progressFill"></span></div>
         </div>
-      `;
-      saveBtn.dataset.last = JSON.stringify(prediction);
-    });
+        <ul>
+          <li>Your estimated skin type</li>
+          <li>One routine tip for that type</li>
+          <li>Results you can save in this browser</li>
+        </ul>
+        <p class="t-small muted">The quiz runs in your browser and sends nothing to us. For scores from a photo, the FaceGlow app checks 10 skin signals.</p>
+      </aside>
+      <div class="span-7 start-6">
+        <form class="quiz" id="quiz" novalidate aria-label="Skin type quiz">
+        <fieldset class="q" id="q1">
+          <legend><span>01</span>How does your skin usually feel by midday?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q1" value="oily"><span>Shiny and oily</span></label><label class="choice"><input type="radio" name="q1" value="dry"><span>Tight or dry</span></label><label class="choice"><input type="radio" name="q1" value="normal"><span>Balanced</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q2">
+          <legend><span>02</span>How often do you notice shine on your face?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q2" value="often"><span>Very often</span></label><label class="choice"><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label class="choice"><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q3">
+          <legend><span>03</span>Do flaky or rough patches show up on your skin?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q3" value="yes"><span>Yes, often</span></label><label class="choice"><input type="radio" name="q3" value="no"><span>Not really</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q4">
+          <legend><span>04</span>How often do you get breakouts?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q4" value="often"><span>Often</span></label><label class="choice"><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label class="choice"><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q5">
+          <legend><span>05</span>Is your T-zone oily while your cheeks stay drier?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q5" value="yes"><span>Yes</span></label><label class="choice"><input type="radio" name="q5" value="no"><span>No, it is even</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q6">
+          <legend><span>06</span>Does new skincare cause redness or irritation?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q6" value="often"><span>Often</span></label><label class="choice"><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label class="choice"><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q7">
+          <legend><span>07</span>How visible are your pores?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q7" value="large"><span>Quite visible</span></label><label class="choice"><input type="radio" name="q7" value="moderate"><span>In between</span></label><label class="choice"><input type="radio" name="q7" value="small"><span>Small</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q8">
+          <legend><span>08</span>Right after washing, your skin feels:</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q8" value="tight"><span>Tight</span></label><label class="choice"><input type="radio" name="q8" value="comfortable"><span>Comfortable</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q9">
+          <legend><span>09</span>How hydrated does your skin usually look?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q9" value="well"><span>Fresh and hydrated</span></label><label class="choice"><input type="radio" name="q9" value="somewhat"><span>Somewhat hydrated</span></label><label class="choice"><input type="radio" name="q9" value="not"><span>Dull or dry</span></label></div>
+        </fieldset>
+        <fieldset class="q" id="q10">
+          <legend><span>10</span>Do you have visible redness or sensitivity?</legend>
+          <div class="choices"><label class="choice"><input type="radio" name="q10" value="yes"><span>Yes</span></label><label class="choice"><input type="radio" name="q10" value="no"><span>No</span></label></div>
+        </fieldset>
+          <div class="btn-row">
+            <button class="btn btn--primary" type="submit">See my skin type</button>
+            <button class="btn btn--secondary" type="reset">Start again</button>
+          </div>
+          <p class="quiz__status" id="quizStatus" role="status"></p>
+        </form>
 
-    saveBtn.addEventListener('click', () => {
-      const raw = saveBtn.dataset.last;
-      if (!raw) {
-        alert('Submit the quiz first to save a result.');
-        return;
-      }
-      const pred = JSON.parse(raw);
-      const hist = loadHistory();
-      hist.push({ date: new Date().toLocaleString(), type: pred.type, score: pred.score });
-      localStorage.setItem('skinHistory', JSON.stringify(hist));
-      renderHistory();
-      alert('Result saved to history.');
-    });
+        <section class="result" id="result" tabindex="-1" hidden aria-labelledby="resultType">
+          <h2 id="resultType">Your skin type</h2>
+          <p id="resultTip"></p>
+          <p class="t-small muted">An estimate from your answers, not a diagnosis.</p>
+          <div class="btn-row">
+            <button class="btn btn--secondary" type="button" id="saveBtn">Save this result</button>
+          </div>
+          <p class="t-small" id="saveStatus" role="status"></p>
+        </section>
 
-    updateProgress();
+        <section class="history" aria-labelledby="history-h">
+          <h2 id="history-h">Saved results</h2>
+          <ol id="historyList"></ol>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div class="span-4 stack-4">
+        <a class="nav__logo" href="index.html"><img src="img/logo-96.png" alt="" width="32" height="32">FaceGlow</a>
+        <p class="footer__lede">Skin scores from a selfie, for iPhone. Cosmetic information only, not medical advice.</p>
+      </div>
+      <div class="span-2 start-7 footer__col"><h3>FaceGlow</h3><ul><li><a href="index.html#app">App</a></li><li><a href="index.html#signals">Features</a></li><li><a href="index.html#questions">Questions</a></li></ul></div>
+      <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="skin-quiz.html">Skin quiz</a></li></ul></div>
+      <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="mailto:softechabn@gmail.com">Email us</a></li></ul></div>
+    </div>
+    <div class="footer__legal">
+      <span>&copy; 2026 FaceGlow &nbsp; <a href="privacy-policy.html">Privacy</a> &nbsp; <a href="terms-of-use.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script>
+(() => {
+  const quiz = document.getElementById('quiz');
+  const status = document.getElementById('quizStatus');
+  const fill = document.getElementById('progressFill');
+  const count = document.getElementById('progressCount');
+  const result = document.getElementById('result');
+  const saveBtn = document.getElementById('saveBtn');
+  const saveStatus = document.getElementById('saveStatus');
+  const historyList = document.getElementById('historyList');
+  const TOTAL = 10, KEY = 'skinHistory';
+  const NAMES = { oily: 'Oily', dry: 'Dry', combination: 'Combination', sensitive: 'Sensitive', normal: 'Normal' };
+  const TIPS = {
+    oily: 'A gentle foaming cleanser and a light moisturiser suit you. Salicylic acid can help where breakouts show up.',
+    dry: 'Look for ceramides and hyaluronic acid, and use a cleanser that does not strip the skin.',
+    combination: 'Use lighter layers on the T-zone and richer moisture where your skin feels drier.',
+    sensitive: 'Choose fragrance-free products with few ingredients, and patch-test anything new first.',
+    normal: 'Keep a steady routine: gentle cleansing, moisture and daily sunscreen.'
+  };
+  let last = null;
+
+  const store = {
+    read() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } },
+    write(list) { try { localStorage.setItem(KEY, JSON.stringify(list)); return true; } catch { return false; } }
+  };
+
+  function answers() { const a = {}; new FormData(quiz).forEach((v, k) => { a[k] = v; }); return a; }
+
+  function progress() {
+    const n = Object.keys(answers()).length;
+    fill.style.width = (n / TOTAL * 100) + '%';
+    count.textContent = n + ' of ' + TOTAL;
+  }
+
+  function predict(a) {
+    const s = { oily: 0, dry: 0, combination: 0, sensitive: 0, normal: 0 };
+    if (a.q1 === 'oily') s.oily += 2; if (a.q1 === 'dry') s.dry += 2; if (a.q1 === 'normal') s.normal += 2;
+    if (a.q2 === 'often') s.oily += 2; if (a.q2 === 'sometimes') s.combination += 1;
+    if (a.q3 === 'yes') s.dry += 1;
+    if (a.q4 === 'often') s.oily += 1; if (a.q4 === 'sometimes') s.oily += 0.5;
+    if (a.q5 === 'yes') s.combination += 2;
+    if (a.q6 === 'often') s.sensitive += 2; if (a.q6 === 'sometimes') s.sensitive += 1;
+    if (a.q7 === 'large') s.oily += 1; if (a.q7 === 'small') s.dry += 1;
+    if (a.q8 === 'tight') s.dry += 1; if (a.q8 === 'comfortable') s.normal += 1;
+    if (a.q9 === 'well') s.normal += 1; if (a.q9 === 'not') s.dry += 1;
+    if (a.q10 === 'yes') s.sensitive += 2;
+    const type = Object.keys(s).sort((x, y) => s[y] - s[x])[0];
+    return { type, score: Math.round(s[type] * 10) };
+  }
+
+  function renderHistory() {
+    const list = store.read();
+    historyList.innerHTML = '';
+    if (!list.length) { historyList.innerHTML = '<li class="empty">No saved results yet.</li>'; return; }
+    list.slice().reverse().forEach(item => {
+      const li = document.createElement('li');
+      const when = document.createElement('span'); when.textContent = item.date;
+      const what = document.createElement('b'); what.textContent = (NAMES[item.type] || item.type);
+      li.append(what, when); historyList.appendChild(li);
+    });
+  }
+
+  quiz.addEventListener('change', e => { e.target.closest('.q')?.classList.remove('is-missing'); progress(); });
+
+  quiz.addEventListener('submit', e => {
+    e.preventDefault();
+    const a = answers();
+    const missing = [];
+    for (let i = 1; i <= TOTAL; i++) {
+      const q = document.getElementById('q' + i);
+      const miss = !a['q' + i];
+      q.classList.toggle('is-missing', miss);
+      if (miss) missing.push(i);
+    }
+    if (missing.length) {
+      status.textContent = 'Answer ' + (missing.length === 1 ? 'question ' : 'questions ') + missing.join(', ') + ' to see your skin type.';
+      document.querySelector('#q' + missing[0] + ' input').focus();
+      return;
+    }
+    status.textContent = '';
+    last = predict(a);
+    document.getElementById('resultType').textContent = 'Your skin type: ' + NAMES[last.type];
+    document.getElementById('resultTip').textContent = TIPS[last.type];
+    saveStatus.textContent = '';
+    result.hidden = false;
+    result.focus();
+  });
+
+  quiz.addEventListener('reset', () => {
+    setTimeout(progress); result.hidden = true; status.textContent = '';
+    quiz.querySelectorAll('.is-missing').forEach(q => q.classList.remove('is-missing'));
+  });
+
+  saveBtn.addEventListener('click', () => {
+    if (!last) return;
+    const list = store.read();
+    list.push({ date: new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }), type: last.type, score: last.score });
+    saveStatus.textContent = store.write(list) ? 'Saved on this device.' : 'This browser does not allow saving.';
     renderHistory();
-  </script>
+  });
+
+  progress();
+  renderHistory();
+})();
+</script>
 </body>
 </html>
