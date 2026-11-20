@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The static website for **FaceGlow – AI Skin Scanner** (iOS app). It is plain HTML, CSS and JS with no build step and no framework. The App Store listing links to the privacy and terms pages, so their URLs must not change.
 
+Live at **https://busenursahin.github.io/skin-analyzer-web/** (GitHub Pages, built from `main`; `.nojekyll` keeps GitHub from running Jekyll). The App Store listing and the RevenueCat paywall link to `…/privacy-policy.html` and `…/terms-of-use.html` there; each page's `canonical` and `og:url` point to that address. A Vercel copy existed and is being retired.
+
 Pages:
 - `index.html`: the landing page. A hero with a live HTML result card, real app screenshots (`img/screens-*.webp`), features, a privacy diagram, FAQ and footer.
 - `skin-quiz.html`: a 10-question skin-type quiz. It scores in the browser. `localStorage` is wrapped in try/catch, and the page never uses `alert()`.
@@ -38,4 +40,6 @@ If the API starts collecting something new, update the policy in the same change
 
 ## Leftovers
 
-`styles.css`, `logo.jpg` and `ss/` belong to the old design and are no longer referenced. They can be deleted.
+`styles.css` and `logo.jpg` belong to the old design and are no longer referenced. They can be deleted.
+
+App screenshots: `img/screens-4.webp` (desktop) and `img/screens-2.webp` (phone) are built from `../SkinAnalyzerAI/screenshots/app-latest/` (rounded screens on a transparent background); `img/home-400/640.webp` is the home screen.

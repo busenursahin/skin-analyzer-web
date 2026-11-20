@@ -8,12 +8,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="FaceGlow: AI skin analysis app for iPhone">
 <meta property="og:description" content="Ten skin signals scored from one selfie, with every scan saved for comparison.">
-<meta property="og:image" content="share.jpg">
+<meta property="og:image" content="https://busenursahin.github.io/skin-analyzer-web/share.jpg">
+<meta property="og:url" content="https://busenursahin.github.io/skin-analyzer-web/">
+<link rel="canonical" href="https://busenursahin.github.io/skin-analyzer-web/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#f7f9f8">
-<!-- <link rel="canonical" href="https://[the client's domain]/"> -->
 <meta name="site-kind" content="software">
 <meta name="page-type" content="software">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,7 +162,7 @@
               <a href="#languages">Languages<span>Results in 19 languages</span></a>
             </div>
             <a class="menu-card span-3 start-10" href="#app">
-              <div class="panel"><img class="frame__img" src="img/results-400.webp" alt="The FaceGlow score card showing 83 out of 100" style="object-position: top"></div>
+              <div class="panel"><img class="frame__img" src="img/home-400.webp" srcset="img/home-400.webp 400w, img/home-640.webp 640w" sizes="(max-width: 639px) 80vw, 400px" alt="The FaceGlow home screen with the last skin score, 83 out of 100" style="object-position: top"></div>
               <span class="t-card">The score card</span>
               <span class="t-small muted">See all four screens</span>
             </a>
@@ -220,12 +221,12 @@
     <div class="wrap">
       <div class="grid grid--top">
         <h2 class="span-5" id="app-h">The FaceGlow app in 4 screens</h2>
-        <p class="span-6 start-7 t-lead">Frame your face inside the guide, wait while each signal is read, open the score card, and find every past scan under History. <a class="link" href="#signals">See what each score covers</a></p>
+        <p class="span-6 start-7 t-lead">Frame your face inside the guide, see your latest score on the home screen, find every past scan under History, and keep your daily skincare routine. <a class="link" href="#signals">See what each score covers</a></p>
       </div>
       <div class="frame frame--lit screens fill">
         <picture>
           <source media="(max-width: 639px)" srcset="img/screens-2.webp">
-          <img src="img/screens-4.webp" width="2376" height="1110" alt="Four FaceGlow screens: the camera with a face guide, the analysis in progress, the score card and the list of past scans" loading="lazy" data-source="client" data-subject="FaceGlow app screens">
+          <img src="img/screens-4.webp" width="2376" height="1223" alt="Four FaceGlow screens: the camera with a face guide, the home screen with the last score, the list of past scans and the daily skincare routine" loading="lazy" data-source="client" data-subject="FaceGlow app screens">
         </picture>
       </div>
     </div>
@@ -337,17 +338,12 @@
     <div class="wrap">
       <div class="grid grid--top fill">
         <div class="span-5 stack-4">
-          <h2 id="privacy-h">Your skin scans carry no name or email</h2>
-          <p class="t-lead">FaceGlow needs no account. Each scan is kept under a random ID, and your photos are never used to train AI.</p>
-          <ul class="facts">
-            <li>No sign-up, no email, no phone number</li>
-            <li>Photos go to our AI system with storage turned off</li>
-            <li>Scans deleted on request by email</li>
-          </ul>
+          <h2 id="privacy-h">Your data is safe with FaceGlow</h2>
+          <p class="t-lead">We never link your scans to you. Photos are kept only for your AI skin analysis.</p>
           <p><a class="link" href="privacy-policy.html">Read the privacy policy</a></p>
         </div>
         <div class="frame frame--split frame--fill frame--lit span-6 start-7">
-          <div class="dg" data-diagram data-dg-still><script type="application/json">{"layout": "lanes", "alt": "A selfie goes to FaceGlow, which sends the result to your phone, keeps a copy under a random ID and asks our AI system with storage turned off.", "input": {"label": "Selfie", "icon": "ui:camera", "sub": "One photo"}, "core": {"label": "FaceGlow"}, "lanes": [{"label": "Your result", "icon": "ui:smartphone", "done": true, "sub": "10 scores"}, {"label": "Random ID", "icon": "ui:lock", "done": true, "sub": "No name"}, {"label": "AI system", "icon": "ui:sparkles", "done": true, "sub": "Storage off"}]}</script></div>
+          <div class="dg" data-diagram data-dg-still><script type="application/json">{"layout": "lanes", "alt": "A selfie goes to FaceGlow, which returns your result, keeps the scan without your name and uses it only for the AI analysis.", "input": {"label": "Selfie", "icon": "ui:camera", "sub": "One photo"}, "core": {"label": "FaceGlow"}, "lanes": [{"label": "Your result", "icon": "ui:smartphone", "done": true, "sub": "10 scores"}, {"label": "Not linked", "icon": "ui:lock", "done": true, "sub": "No name"}, {"label": "AI analysis", "icon": "ui:sparkles", "done": true, "sub": "Only use"}]}</script></div>
         </div>
       </div>
     </div>
