@@ -30,44 +30,78 @@
 
     <main class="legal-card">
       <h1>1. Privacy Policy (Gizlilik Politikası)</h1>
-      <div class="legal-meta">Last Updated: March 25, 2026</div>
+      <div class="legal-meta">Last Updated: November 20, 2026</div>
 
       <div class="legal-callout">
         <strong>Our core privacy principle</strong>
-        <p>We do not collect or store your personal identity data.</p>
+        <p>We collect the data needed to run and improve FaceGlow, but we do not link it to who you are. We never ask for your name, email, phone number or Apple ID, and we do not try to identify you.</p>
       </div>
 
       <h2>1. Introduction</h2>
-      <p>FaceGlow is committed to protecting your privacy. This policy explains how we process your information. Our core principle is: We do not collect or store your personal identity data.</p>
+      <p>This policy explains what information FaceGlow collects when you use the app, why we collect it, and how we protect it. FaceGlow does not require an account. All data we collect is associated only with a random, anonymous identifier and never with your real identity.</p>
 
-      <h2>2. Data Collection and Processing</h2>
-      <p><strong>Visual Data:</strong> To provide skin analysis, the app requires access to your camera. Photos taken are transmitted via secure, encrypted channels to authorized AI service providers for real-time analysis.</p>
-      <p><strong>Transient Processing:</strong> Images are processed temporarily to generate your skin report. Once the analysis is complete and delivered to your device, the images are automatically deleted from the processing servers.</p>
-      <p><strong>No Training:</strong> Your visual data is not used to train or improve AI models.</p>
-      <p><strong>Account Data:</strong> We do not collect names, emails, or addresses. No account creation is required.</p>
-
-      <h2>2a. Third-Party AI Service Provider</h2>
-
-      <p>To perform skin analysis, the app transmits your facial photo to our third-party AI service provider. Below is a summary of this data sharing:</p>
-
+      <h2>2. Information We Collect</h2>
+      <p>When you run a skin analysis, the app sends a request to our own servers. We collect and store the following:</p>
       <ul>
-          <li><strong>What data is shared:</strong> Your facial photo captured via the device camera. The image is compressed and resized before transmission. No other personal identifiers (name, email, device ID) are attached to the image.</li>
-          <li><strong>Who receives the data:</strong> Our AI-powered analysis is processed through a secure backend service that utilizes an AI service provider for image analysis.</li>
-          <li><strong>Purpose:</strong> The sole purpose of sharing this data is to generate your personalized skin analysis report. The data is not used for advertising, profiling, or any purpose other than delivering the analysis results.</li>
-          <li><strong>Data retention:</strong> All API requests are made with data storage disabled (store: false). Your images are not retained, stored, or cached on the AI provider's servers after processing is complete.</li>
-          <li><strong>No AI training:</strong> Your facial photos and analysis data are never used to train, improve, or fine-tune any AI or machine learning models.</li>
-          <li><strong>Equal protection:</strong> Our third-party AI service provider is contractually required to maintain the same or greater level of data protection as described in this Privacy Policy, including encryption in transit and no data retention.</li>
+        <li><strong>Photos you submit for analysis:</strong> The facial photo you take for an analysis. The app compresses and resizes it before upload, and it is stored on our servers.</li>
+        <li><strong>Analysis results:</strong> The skin report generated for your photo (score, skin type, parameters and recommendations).</li>
+        <li><strong>Anonymous user identifier:</strong> A random ID created by our subscription provider, RevenueCat (for example <code>$RCAnonymousID:…</code>). It contains no personal information and is not derived from your name, email, phone number or Apple ID.</li>
+        <li><strong>Subscription status:</strong> Your plan (weekly, monthly or yearly), the store, and the renewal or expiry date. We use these to confirm that the request comes from an active subscription.</li>
+        <li><strong>Technical and usage data:</strong> App version and build, device model (for example "iPhone15,2"), iOS version, selected language, request date and time, response time, and whether the request succeeded.</li>
+        <li><strong>Country:</strong> The country of your App Store account, as reported by Apple's StoreKit. We do not collect your city, region or precise (GPS) location.</li>
+        <li><strong>Hashed IP address:</strong> We do not store your IP address in readable form. We keep only a one-way hashed value, used to count unique connections and prevent abuse.</li>
       </ul>
 
-      <p><strong>User Consent:</strong> Before any facial photo is transmitted for analysis, the app displays a Data Sharing Notice within the app and requires your explicit consent. You may decline, and no data will be sent. Your consent preference is stored locally on your device.</p>
+      <h2>3. Information We Do Not Collect</h2>
+      <ul>
+        <li>Your name, email address, phone number, postal address or Apple ID.</li>
+        <li>Your contacts, photo library (other than photos you choose to analyze) or precise location.</li>
+        <li>Advertising identifiers. We do not track you across other apps or websites.</li>
+      </ul>
 
-      <h2>3. Data Security</h2>
-      <p>All data transmission is protected using industry-standard SSL/TLS encryption. We do not sell or share your data with third-party advertisers.</p>
+      <h2>4. Data Is Not Linked to Your Identity</h2>
+      <p>Everything listed above is stored together with the anonymous identifier only. We do not combine it with any information that would reveal who you are, we do not attempt to re-identify users, and we do not sell your data or build advertising profiles.</p>
+      <p>Note that a photo of a face is personal by nature. We therefore treat submitted photos as sensitive data. Access is restricted to authorized staff, and photos are used only for the purposes described below.</p>
 
-      <h2>4. User Control</h2>
-      <p>You can revoke camera permissions at any time through your device settings. Deleting the app removes all locally stored analysis history.</p>
+      <h2>5. How We Use the Information</h2>
+      <ul>
+        <li>To generate and deliver your skin analysis.</li>
+        <li>To verify your subscription with RevenueCat and confirm that requests come from the FaceGlow app.</li>
+        <li>To enforce fair-use limits (for example a daily analysis limit) and to prevent fraud and abuse of the service.</li>
+        <li>To diagnose errors, monitor performance and keep the service secure.</li>
+        <li>To produce aggregated usage statistics (for example the number of analyses per day, app versions or countries) and to improve the quality of the service.</li>
+      </ul>
+      <p>We do not use your photos or analysis data to train AI or machine learning models.</p>
 
-      <h2>5. Contact</h2>
+      <h2>6. Service Providers</h2>
+      <ul>
+        <li><strong>AI service provider (OpenAI):</strong> Your photo is sent to our AI provider to generate the analysis. Requests are made with data storage disabled (<code>store: false</code>), and the provider does not use the data to train its models. No identifier other than the photo itself is sent to the AI provider.</li>
+        <li><strong>RevenueCat:</strong> Manages subscriptions. Our servers send RevenueCat the anonymous identifier to check your subscription status.</li>
+        <li><strong>Apple:</strong> Processes payments through your App Store account. We never receive your payment details.</li>
+        <li><strong>Hosting:</strong> Photos, results and request logs are stored on servers we operate.</li>
+      </ul>
+
+      <h2>7. Data Retention</h2>
+      <p>We keep collected data only for as long as it is needed for the purposes described in this policy. After that it is deleted, or kept only in aggregated form that cannot be traced back to an individual identifier.</p>
+
+      <h2>8. Data Security</h2>
+      <p>All data is transmitted with industry-standard TLS encryption. Stored data is protected by access controls, and IP addresses are stored only as one-way hashes.</p>
+
+      <h2>9. Your Choices and Rights</h2>
+      <ul>
+        <li>You decide whether to take and submit a photo. No photo is sent unless you start an analysis.</li>
+        <li>You can revoke camera access at any time in your device settings.</li>
+        <li>Your analysis history is also kept locally on your device. Deleting the app removes that local copy.</li>
+        <li>You may ask us to access or delete the data stored on our servers by emailing us. Because the data is not linked to your identity, we may ask for details that help us locate it, for example the approximate dates and times of your analyses and your device model.</li>
+      </ul>
+
+      <h2>10. Children</h2>
+      <p>FaceGlow is not intended for children under 13 (or the minimum legal age in your country), and we do not knowingly collect data from them.</p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this policy from time to time. The "Last Updated" date above shows when it was last changed.</p>
+
+      <h2>12. Contact</h2>
       <p>For privacy inquiries: <a href="mailto:softechabn@gmail.com">softechabn@gmail.com</a></p>
     </main>
 
