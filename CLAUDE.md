@@ -31,7 +31,7 @@ The site was built with the `design-taste-frontend` skill (kind: software).
 
 `privacy-policy.html` is the public promise. Keep it consistent with `../skin-analyzer-api` and the iOS app:
 - What is collected: photos, analysis results, the anonymous RevenueCat subscription ID, subscription status, and app and device info.
-- Data is never linked to a person, and photos are not used for AI training (OpenAI is called with `store: false`).
+- Data is never linked to a person, and photos are not used for AI training (the AI provider is called with `store: false`). The site says "AI system" and never names the provider (OpenAI); keep it that way.
 - Not stored: name, email, phone, IP address, country or any location.
 
 If the API starts collecting something new, update the policy in the same change.
